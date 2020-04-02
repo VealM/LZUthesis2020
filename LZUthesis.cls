@@ -319,7 +319,7 @@
 \newcommand{\Intro}{%
 \clearpage
 \phantomsection
-	%\addcontentsline{toc}{chapter}{引\quad 言}
+	\addcontentsline{toc}{chapter}{引\quad 言}
     \chapter*{引\LZUspace\LZUspace 言}
     \zihao{-4}
 
