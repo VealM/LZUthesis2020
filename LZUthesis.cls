@@ -12,9 +12,9 @@
 
 %%=======page
 %页面边距
-%论文页边距一般要求：上边距3cm、下边距2.54cm,左右边距3.17cm,页眉页脚2.0cm。
+%论文页边距一般要求：上边距2.5cm、下边距2.5cm,左边距2.5cm,右边距2.0cm,页眉页脚1.5cm。
 %%=======page
-\RequirePackage[top=3cm, bottom=2.54cm,outer=3.17cm, inner=3.17cm, headheight=2cm, footskip=2cm, heightrounded]{geometry}
+\RequirePackage[top=2.5cm, bottom=2.5cm,outer=2.5cm, inner=2.0cm, headheight=1.5cm, footskip=1.5cm, heightrounded]{geometry}
 
 
 %=======package
@@ -313,6 +313,15 @@
     \chapter*{致\LZUspace\LZUspace 谢}
     \zihao{-4}\fangsong
 }
+
+\newcommand{\Intro}{%
+\clearpage
+\phantomsection
+	%\addcontentsline{toc}{chapter}{引\quad 言}
+    \chapter*{引\LZUspace\LZUspace 言}
+    \zihao{-4}
+
+}
 %---------------------------
 %超链接
 %---------------------------
@@ -354,7 +363,7 @@
 \begin{center}
     \zihao{-3}\bfseries\songti
     \begin{tabularx}{\textwidth}{|X|}
-        \multicolumn{1}{c}{\zihao{3}\heiti\mdseries 论文（设计）成绩}\\
+        \multicolumn{1}{c}{\zihao{3}\heiti\mdseries 毕业论文（设计）成绩}\\
         \hline
         导师评语\\%
         \centerline{%
@@ -362,23 +371,24 @@
                 \setlength\parindent{\ccwd}
                 \zihao{-4} \the \supervisorcomment   
             \end{minipage}}\\
-        建议成绩\LZUunderline[80pt]{\the \recommendedgrade}\hfill 指导教师（签字）\LZUunderline[80pt]{
+        {\heiti\mdseries 建议成绩}\LZUunderline[80pt]{\the \recommendedgrade}\hfill {\heiti\mdseries 指导教师（签字）}\LZUunderline[80pt]{
 \the \supervisorsignature}\\
         \hline
-        答辩小组意见\\
+        {\heiti\mdseries 答辩委员会意见}\\
 \centerline{%
             \begin{minipage}[t][2cm][t]{0.92\textwidth}
                 \setlength\parindent{\ccwd}
                 \zihao{-4} \the\committeecomment
             \end{minipage}}
-        \hfill 答辩委员会负责人（签字）\underline{\hspace{80pt}}\\
+        \hfill {\heiti\mdseries 答辩委员会负责人（签字）}\underline{\hspace{80pt}}\\
         \hline
         \\[2.3cm]
-        成\LZUspace\LZUspace 绩\LZUunderline[80pt]{\the \finalgrade}\hfill 学院（盖章）\underline{\hspace{80pt}}\\
-        \hfill{\zihao{-4}年\hspace{20pt}月\hspace{20pt}日}\\
+        {\heiti\mdseries 成}\LZUspace\LZUspace {\heiti\mdseries 绩}\LZUunderline[80pt]{\the \finalgrade}\hfill {\heiti\mdseries 学院（盖章）}\underline{\hspace{80pt}}\\
+        \hfill{\zihao{-4}\heiti\mdseries 年\hspace{20pt}月\hspace{20pt}日}\\
         \hline
     \end{tabularx}
 \end{center}
+\newpage
 }
 
 
