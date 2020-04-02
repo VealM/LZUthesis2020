@@ -152,6 +152,8 @@
                     & {\StrFindGroup{\the\entitle}{\value{title_str_number}}[\mygroup]\LZUunderline[258pt]{\fontspec{Times New Roman-Bold}\zihao{3}\mygroup}}\\[0.40cm]%
                 }%
             }%
+        \end{tabular}
+            \begin{tabular}{cc}
             \\ \hspace*{\fill} \\        
             {\bfseries \songti \LZU@label@author} &
             {\LZUunderline[258pt]{\bfseries \songti \zihao{-3}\@author}}\\[0.40cm]
