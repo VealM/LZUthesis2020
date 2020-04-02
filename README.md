@@ -3,6 +3,8 @@
 根据[2020最新本科生毕业论文模板](2020兰州大学本科生毕业论文模板.docx)改编自[LZUThesis2017](https://github.com/suchot/LZUThesis2017)
 特别致谢LZUThesis2017作者suchot
 
+移步[LZUThesis2020码云仓库](https://gitee.com/VealM/LZUthesis2020)获取更加稳定的国内下载速度
+
 ## 使用方法
 
 推荐使用 texlive + texstudio
