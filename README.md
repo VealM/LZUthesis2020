@@ -1,5 +1,12 @@
 # 兰州大学本科生（学士学位）LaTeX模板
 
+## 最新更新
+
+最新修改于2020/4/24。根据兰州大学官方模板要求，对目录页不再进行编页码，仅对摘要页用罗马数字编页码。
+
+涉及修改的文件为[LZUthesis.cls](LZUthesis.cls)及[template.tex](template.tex)。考虑到可能有同学在此之前已下载模板，这里也以pull request的方式贴心给出[修改部分](https://github.com/VealM/LZUthesis2020/pull/1/files)
+## 原始版本
+
 根据[2020最新本科生毕业论文模板](2020兰州大学本科生毕业论文模板.docx)改编自[LZUThesis2017](https://github.com/suchot/LZUThesis2017)
 特别致谢LZUThesis2017作者suchot
 
