@@ -75,7 +75,8 @@
     \thispagestyle{mainmatterstyle}
 }
 \AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}}
-
+\AtBeginDocument{\addtocontents{lof}{\protect\thispagestyle{empty}}}
+\AtBeginDocument{\addtocontents{lot}{\protect\thispagestyle{empty}}}
 
 
 %=======format
