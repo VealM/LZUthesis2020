@@ -43,7 +43,8 @@
 \RequirePackage{etoolbox}
 \pagestyle{fancy}          % Enables the custom headers/footers
 
-\fancypagestyle{frontmatterstyle}{
+% 前置页版式
+\fancypagestyle{frontmatterstyle}{ 
     \fancyhf{}
     \renewcommand{\headrulewidth}{0pt}
 
@@ -73,8 +74,9 @@
 \fancypagestyle{plain}{
     \thispagestyle{mainmatterstyle}
 }
-\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{frontmatterstyle}}}
-
+\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}}
+\AtBeginDocument{\addtocontents{lof}{\protect\thispagestyle{empty}}}
+\AtBeginDocument{\addtocontents{lot}{\protect\thispagestyle{empty}}}
 
 
 %=======format
@@ -232,8 +234,11 @@
 \newcommand{\ZhAbstract}[2]{%
     \phantomsection
     \addcontentsline{toc}{chapter}{中文摘要}
-    \thispagestyle{frontmatterstyle}
+   % \thispagestyle{frontmatterstyle}
    % \thispagestyle{empty}
+   \thispagestyle{plain}
+   \setcounter{page}{1}
+    \pagenumbering{Roman}
     \begin{center}%
         \setlength{\parskip}{24pt}
         \begin{minipage}{0.8\textwidth}
@@ -361,7 +366,8 @@
 \newcommand{\Grade}{
 \clearpage
 \phantomsection
-\addcontentsline{toc}{chapter}{论文（设计）成绩}
+\thispagestyle{empty}
+%\addcontentsline{toc}{chapter}{论文（设计）成绩}
 \begin{center}
     \zihao{-3}\bfseries\songti
     \begin{tabularx}{\textwidth}{|X|}
@@ -395,7 +401,7 @@
 
 
 
-%\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{frontmatterstyle}}}
+%\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}}
 
 %item style
 \usepackage{enumitem}
