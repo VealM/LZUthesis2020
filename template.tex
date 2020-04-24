@@ -82,12 +82,20 @@
 
 
 %生成目录
+\addtocontents{toc}{\protect\thispagestyle{empty}}
 \tableofcontents
 %插入图或表的目录
+
 \renewcommand\listfigurename{插\ 图\ 目\ 录}
 \renewcommand\listtablename{表\ 格\ 目\ 录}
+%\addtocontents{lof}{\protect\thispagestyle{empty}}
 \listoffigures
+\thispagestyle{empty}
+\newpage
+%\addtocontents{lot}{\protect\thispagestyle{empty}}
 \listoftables
+\thispagestyle{empty}
+\newpage
 %文章主体
 \mainmatter
 
