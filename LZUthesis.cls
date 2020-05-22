@@ -130,7 +130,7 @@
     \begin{center}
         \includegraphics[width=6cm]{lzu.jpg}\\
         \vspace*{21.8pt}
-        {\yahei \fontsize{28bp}{0pt}\ziju{0}{\LZU@label@thesis\\}}
+        {\yahei \zihao{1}\ziju{0}{\LZU@label@thesis\\}}
         \vspace{21.8pt}
         %{\zihao{4}\yahei（本\ 科\ 生）}
         \par
@@ -158,15 +158,15 @@
             \begin{tabular}{cc}
             \\ \hspace*{\fill} \\        
             {\bfseries \songti \LZU@label@author} &
-            {\LZUunderline[258pt]{\bfseries \songti \zihao{-3}\@author}}\\[0.40cm]
+            {\LZUunderline[258pt]{\bfseries \songti \zihao{3}\@author}}\\[0.40cm]
             {\bfseries \songti \LZU@label@advisor} &
-            {\LZUunderline[258pt]{\bfseries \songti \zihao{-3}  \the\advisor}} \\[0.40cm]
+            {\LZUunderline[258pt]{\bfseries \songti \zihao{3}  \the\advisor}} \\[0.40cm]
             {\bfseries \songti \LZU@label@college} &
-            {\LZUunderline[258pt]{\bfseries \songti  \zihao{-3} \the\college}} \\[0.40cm]
+            {\LZUunderline[258pt]{\bfseries \songti  \zihao{3} \the\college}} \\[0.40cm]
             {\bfseries \songti \LZU@label@major} &
-            {\LZUunderline[258pt]{\bfseries \songti  \zihao{-3} \the\major}}\\[0.40cm]
+            {\LZUunderline[258pt]{\bfseries \songti  \zihao{3} \the\major}}\\[0.40cm]
             {\bfseries \songti \LZU@label@grade} &
-            {\LZUunderline[258pt]{\bfseries \songti \zihao{-3}  \the\grade}}\\[0.40cm]
+            {\LZUunderline[258pt]{\bfseries \songti \zihao{3}  \the\grade}}\\[0.40cm]
         \end{tabular}
         \par
         \vspace{70pt}
@@ -244,7 +244,7 @@
         \begin{minipage}{0.8\textwidth}
             \linespread{1.3889}
             \centering
-            \zihao{3}\heiti\bfseries \noindent\@title\the\titlextra%
+            \zihao{2}\heiti\bfseries \noindent\@title\the\titlextra%
         \end{minipage}
     \end{center}%
     \begin{center}%
@@ -273,7 +273,7 @@
             \linespread{1}
             \selectfont
             \centering
-            \zihao{3} \bfseries \noindent \expandafter\MakeUppercase\expandafter{\the\entitle\ \the\entitletra}%
+            \zihao{2} \bfseries \noindent \expandafter\MakeUppercase\expandafter{\the\entitle\ \the\entitletra}%
         \end{minipage}
     \end{center}%
     \begin{center}%
@@ -289,6 +289,7 @@
     \vspace{11pt}
     \par #1\\\\%
     {\bfseries Key Words:} #2}
+    \newpage
 }
 
 
