@@ -134,7 +134,7 @@
         \vspace{21.8pt}
         %{\zihao{4}\yahei（本\ 科\ 生）}
         \par
-        \zihao{4}
+        \zihao{3}
         \def\tabcolsep{6pt}
         \expandarg
         \newcounter{title_str_number}
@@ -170,7 +170,7 @@
         \end{tabular}
         \par
         \vspace{70pt}
-        {\yahei \ziju{0.3}\zihao{-4}\LZU@label@schooladdress }
+        {\yahei \ziju{0.3}\zihao{3}\LZU@label@schooladdress }
     \end{center}
     \clearpage
 }
