@@ -234,11 +234,11 @@
 \newcommand{\ZhAbstract}[2]{%
     \phantomsection
     \addcontentsline{toc}{chapter}{中文摘要}
-   % \thispagestyle{frontmatterstyle}
+    \thispagestyle{frontmatterstyle}
    % \thispagestyle{empty}
-   \thispagestyle{plain}
-   \setcounter{page}{1}
-    \pagenumbering{Roman}
+   %\thispagestyle{plain}
+   %\setcounter{page}{2}
+    %\pagenumbering{Roman}
     \begin{center}%
         \setlength{\parskip}{24pt}
         \begin{minipage}{0.8\textwidth}
@@ -265,8 +265,11 @@
 \newcommand{\EnAbstract}[2]{%
     \phantomsection
     \addcontentsline{toc}{chapter}{英文摘要}
-    \thispagestyle{frontmatterstyle}
+    %\thispagestyle{frontmatterstyle}
     % \thispagestyle{empty}
+    \thispagestyle{plain}
+   \setcounter{page}{1}
+    \pagenumbering{Roman}
     \begin{center}%
         \setlength{\parskip}{24pt}
         \begin{minipage}{0.8\textwidth}
