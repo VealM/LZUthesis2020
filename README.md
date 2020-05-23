@@ -4,7 +4,7 @@
 
 对模板字号进行修改
 对英文 中文摘要顺序进行修改
-以上修改均以Pull request的形式给出，可参考该[页面](https://github.com/VealM/LZUthesis2020/pull/2)的git比较
+以上修改均以Pull request的形式给出，可参考该[页面](https://github.com/VealM/LZUthesis2020/pull/2)与摘要页页码编号[修正](https://github.com/VealM/LZUthesis2020/pull/7)的git比较
 
 ### 目前存在的问题
 
