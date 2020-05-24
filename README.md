@@ -1,5 +1,10 @@
 # 兰州大学本科生（学士学位）LaTeX模板
 
+## 最最最新更新
+我觉得应该不会再更了...本latex渣渣真的改累了...
+修改部分以Pull request的[形式](https://github.com/VealM/LZUthesis2020/pull/10/files?file-filters%5B%5D=.pdf&file-filters%5B%5D=.tex)给出 做了一些小调整 比如开启伪加粗、修改页眉双划线为单划线以及代码渲染。还增加了一些基础入门教程(不过我会的也不多啦 基本用时全靠搜索)
+关于细节难以做到尽善尽美 但本渣渣尽力了...祝愿大家毕业快乐
+如需旧模板，再次推荐余航大佬的[repo](https://github.com/yuhlzu/LZUThesis2020)
 ## 最最新更新
 
 对模板字号进行修改
