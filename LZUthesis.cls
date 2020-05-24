@@ -49,7 +49,8 @@
     \renewcommand{\headrulewidth}{0pt}
 
     \fancyfoot{} % clear all footer fields
-    \fancyfoot[C]{\thepage} %
+    %\fancyfoot[C]{\thepage} %
+    \cfoot[C]{\thepage}
     \renewcommand{\thepage}{\Roman{page}}
 }
 \appto\frontmatter{\pagestyle{frontmatterstyle}}
@@ -65,8 +66,8 @@
     \rhead{\zihao{-5}\@title}
     % Footers
     \fancyfoot{} % clear all footer fields
-    \fancyfoot[C]{\thepage}
-    \renewcommand\headrule{\hrule width \hsize height 2pt \kern 2pt \hrule width \hsize height 0.4pt}
+    \cfoot[C]{\thepage}
+    \renewcommand\headrule{ \kern 0.8pt \hrule width \hsize height 0.3pt}
 }
 
 \appto\mainmatter{\pagestyle{mainmatterstyle}}
@@ -75,8 +76,7 @@
     \thispagestyle{mainmatterstyle}
 }
 \AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}}
-\AtBeginDocument{\addtocontents{lof}{\protect\thispagestyle{empty}}}
-\AtBeginDocument{\addtocontents{lot}{\protect\thispagestyle{empty}}}
+
 
 
 %=======format
@@ -130,7 +130,7 @@
     \begin{center}
         \includegraphics[width=6cm]{lzu.jpg}\\
         \vspace*{21.8pt}
-        {\yahei \zihao{1}\ziju{0}{\LZU@label@thesis\\}}
+        {\yahei \fontsize{28bp}{0pt}\ziju{0}{\LZU@label@thesis\\}}
         \vspace{21.8pt}
         %{\zihao{4}\yahei（本\ 科\ 生）}
         \par
@@ -141,6 +141,7 @@
         \vspace*{50pt}
         \begin{tabular}{ll}
             \bfseries \songti \LZU@label@titleZh
+            %\textbf{\LZU@label@titleZh}
             \forloop{title_str_number}{1}{\value{title_str_number}<6}{%
                 \StrFindGroup{\@title}{\value{title_str_number}}[\mygroup]%
                 \IfStrEq{\mygroup}{}{}{%
@@ -148,6 +149,7 @@
                 }%
             }%
             \bfseries \songti \LZU@label@titleEn
+            %\textbf{\LZU@label@titleEn}
             \forloop{title_str_number}{1}{\value{title_str_number}<6}{%
                 \StrFindGroup{\the\entitle}{\value{title_str_number}}[\mygroup]%
                 \IfStrEq{\mygroup}{}{}{%
@@ -157,16 +159,16 @@
         \end{tabular}
             \begin{tabular}{cc}
             \\ \hspace*{\fill} \\        
-            {\bfseries \songti \LZU@label@author} &
-            {\LZUunderline[258pt]{\bfseries \songti \zihao{3}\@author}}\\[0.40cm]
-            {\bfseries \songti \LZU@label@advisor} &
-            {\LZUunderline[258pt]{\bfseries \songti \zihao{3}  \the\advisor}} \\[0.40cm]
-            {\bfseries \songti \LZU@label@college} &
-            {\LZUunderline[258pt]{\bfseries \songti  \zihao{3} \the\college}} \\[0.40cm]
-            {\bfseries \songti \LZU@label@major} &
-            {\LZUunderline[258pt]{\bfseries \songti  \zihao{3} \the\major}}\\[0.40cm]
-            {\bfseries \songti \LZU@label@grade} &
-            {\LZUunderline[258pt]{\bfseries \songti \zihao{3}  \the\grade}}\\[0.40cm]
+            {\songti \LZU@label@author} &
+            {\LZUunderline[258pt]{\songti \zihao{3}\@author}}\\[0.40cm]
+            { \songti \LZU@label@advisor} &
+            {\LZUunderline[258pt]{ \songti \zihao{3}  \the\advisor}} \\[0.40cm]
+            { \songti \LZU@label@college} &
+            {\LZUunderline[258pt]{ \songti  \zihao{3} \the\college}} \\[0.40cm]
+            { \songti \LZU@label@major} &
+            {\LZUunderline[258pt]{ \songti  \zihao{3} \the\major}}\\[0.40cm]
+            { \songti \LZU@label@grade} &
+            {\LZUunderline[258pt]{ \songti \zihao{3}  \the\grade}}\\[0.40cm]
         \end{tabular}
         \par
         \vspace{70pt}
@@ -237,8 +239,8 @@
     \thispagestyle{frontmatterstyle}
    % \thispagestyle{empty}
    %\thispagestyle{plain}
-   %\setcounter{page}{2}
-    %\pagenumbering{Roman}
+   %\setcounter{page}{1}
+   % \pagenumbering{Roman}
     \begin{center}%
         \setlength{\parskip}{24pt}
         \begin{minipage}{0.8\textwidth}
@@ -253,12 +255,13 @@
 %        \zihao{3}\heiti \bfseries 摘\phantom{空}要   %  要求效果
         \zihao{3}\heiti  中文摘要    				  %事例页面表现效果
     \end{center}%
-    \linespread{1.3889}
+    \setlength{\baselineskip}{20pt} 
     \selectfont
     \setlength{\parskip}{0pt}
     \vspace{10pt}
-    \par #1\\\\%
-    {\songti \bf 关键词：} #2
+    \par #1\\%
+    \vbox{}\\
+    {\songti \bfseries 关键词：} #2
     \newpage
 }
 
@@ -286,12 +289,12 @@
         \zihao{3}\fontspec{Arial}\bfseries Abstract%
     \end{center}%
     \setlength{\parskip}{0pt}
-    {\zihao{5}
-    \linespread{1.27} %行距20磅
+    \setlength{\baselineskip}{20pt} %行距20磅
     \selectfont
     \vspace{11pt}
-    \par #1\\\\%
-    {\bfseries Key Words:} #2}
+    \par #1\\%
+    \vbox{}\\
+    {\bfseries Key Words:} #2
     \newpage
 }
 
@@ -467,19 +470,51 @@
 %---------------------------
 %程序代码展示
 %---------------------------
+%\RequirePackage{listings}
+%\RequirePackage{courier}
+%\lstset{
+%    basicstyle=\rmfamily\normalsize,
+%    rulesepcolor= \color{gray}, %代码块边框颜色
+%    breaklines=true,  %代码过长则换行
+%    numbers=left, %行号在左侧显示
+%    numberstyle= \small,%行号字体
+    %keywordstyle= \color{red},%关键字颜色
+%    commentstyle=\color{gray}, %注释颜色
+%    frame=shadowbox,%用方框框住代码块
+%    columns=flexible
+%    }
+
 \RequirePackage{listings}
 \RequirePackage{courier}
-\lstset{
-    basicstyle=\rmfamily\normalsize,
-    rulesepcolor= \color{gray}, %代码块边框颜色
-    breaklines=true,  %代码过长则换行
-    numbers=left, %行号在左侧显示
-    numberstyle= \small,%行号字体
-    %keywordstyle= \color{red},%关键字颜色
-    commentstyle=\color{gray}, %注释颜色
-    frame=shadowbox,%用方框框住代码块
-    columns=flexible
-    }
+\RequirePackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{ %
+	language=Python,                % the language of the code
+	basicstyle=\footnotesize,           % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
+	stepnumber=2,                   % the step between two line-numbers. If it's 1, each line 
+	% will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{white},      % choose the background color. You must add \usepackage{color}
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                   % show the filename of files included with \lstinputlisting;
+	% also try caption instead of title
+	keywordstyle=\color{blue},          % keyword style
+	commentstyle=\color{dkgreen},       % comment style
+	stringstyle=\color{mauve},         % string literal style
+}
 
 
 

@@ -1,7 +1,7 @@
 % !TEX TS-program = xelatex
 % !TEX encoding = UTF-8 Unicode
 %                                  ---by suchot
-\documentclass{LZUthesis}
+\documentclass[AutoFakeBold]{LZUthesis}
 
 
 
@@ -102,14 +102,91 @@
 \Intro
 这里是引言部分
 
-\chapter{回溯}
-
-\section{二级标题}
-\subsection{三级标题}
 
 \chapter{研究背景}
+\section{二级标题}
+\subsection{三级标题}
+\par \textbf{章节引用}示例，参见python代码见附录\ref{sec:code}
+\par 听说\textbf{数学公式}输入好南
 
+\begin{equation}
+\begin{aligned}
+\mathrm{KL}(p \| q) &=-\int p(\boldsymbol{x}) \ln q(\boldsymbol{x}) \mathrm{d} \boldsymbol{x}-\left(-\int p(\boldsymbol{x}) \ln p(\boldsymbol{x}) \mathrm{d} \boldsymbol{x}\right) \\
+&=-\int p(\boldsymbol{x}) \ln \left\{\frac{q(\boldsymbol{x})}{p(\boldsymbol{x})}\right\} \mathrm{d} \boldsymbol{x}
+\end{aligned}
+\label{eq:KL}
+\end{equation}
+
+\par 引用KL散度公式，见公式\ref{eq:KL}。
+
+\par 对于公式输入，我选择使用OCR识别，推荐一个小工具\href{https://accounts.mathpix.com/signup?referral_code=8ZTrrDwYv3}{Mathpix}(点击文档中的\href{https://accounts.mathpix.com/signup?referral_code=8ZTrrDwYv3}{Mathpix})
+
+\par 听说\textbf{表格输入}也不太简单。学位论文通常使用三线表
+\begin{table}[htbp] 
+	\centering	
+	\begin{tabular}{lcl} 
+		\toprule 
+		性别 & 身高 & 体重 \\ 
+		\midrule 
+		 女 & 165 & 60 \\ 
+	     男 & 175 & 70 \\ 
+		 女 & 161 & 55 \\ 
+		\bottomrule 
+	\end{tabular} 
+\caption{\label{tab:test}示例表格} 
+\end{table}
+\par 听说你想\textbf{并排插入图像}
+\begin{figure}[H]
+	\begin{minipage}[t]{0.5\textwidth}
+	\centering
+	\tiny 图片1 \\
+	\vspace{0.5cm}
+	\includegraphics[scale=0.05]{anime.jpg}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\centering 
+	\tiny 图片2 \\
+	\vspace{0.5cm}
+	\includegraphics[scale=0.05]{anime.jpg}  
+\end{minipage}	
+\protect\caption{两张图并排 \label {fig:two-pics}}	
+\end{figure}
+
+\par 重要的事强调三遍，详细内容见ReadMe(求你，一定要看) \\
+{\bfseries 编译方式:} XeLaTeX -->BibTeX --> XeLaTeX-->XeLaTeX \\
+{\bfseries 编译方式:} XeLaTeX -->BibTeX --> XeLaTeX-->XeLaTeX \\
+{\bfseries 编译方式:} XeLaTeX -->BibTeX --> XeLaTeX-->XeLaTeX
 \chapter{研究方法}
+\par 再多我也不会了，请学会正确使用搜索引擎。
+\par 我适配的附录代码是python，如使用其他语言可前往cls文件修改代码展示部分$\rightarrow$language = Python。
+
+\begin{lstlisting}[language = python]
+def bin_search_recursively(l, first, last, n):
+'''Binary search n in list l which has been sorted already, returns
+the index if found, else returns None.'''
+	if first > last:
+		return None
+
+	mid = (first + last) // 2 # Use / 2 if you're using Python 2
+	if l[mid] > n:
+		return bin_search_recursively(l, first, mid - 1, n)
+	elif l[mid] < n:
+		return bin_search_recursively(l, mid + 1, last, n)
+	else:
+		return mid
+
+
+if __name__ == '__main__':
+	sorted_num_list = list(range(1, 11))
+	first = 0
+	last = len(sorted_num_list) - 1
+	n1 = 12
+	n2 = 6
+
+	print(bin_search_recursively(sorted_num_list, first, last, n1))
+	print(bin_search_recursively(sorted_num_list, first, last, n2))
+
+\end{lstlisting}
 
 \chapter{研究结果}
 
@@ -129,6 +206,8 @@
 
 
 \Appendix
+\section{python代码}
+\label{sec:code}
 
 
 这里是附录页，附上你的程序或必要的相关知识\cite{partl2016}
